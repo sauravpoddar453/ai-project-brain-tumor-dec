@@ -1,0 +1,12 @@
+services:
+  brain-tumor-detector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: brain-tumor-detector:latest
+    container_name: brain_tumor_detector
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1

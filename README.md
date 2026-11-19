@@ -57,6 +57,36 @@ The app should automatically open in your default web browser. If it doesn't, ma
 **http://localhost:8501**
 
 ---
+
+## 🐳 How to Run with Docker
+
+### Option 1: Using Docker CLI
+1. **Build the Docker Image:**
+   ```bash
+   docker build -t brain-tumor-detector .
+   ```
+2. **Run the Container:**
+   ```bash
+   docker run -p 8501:8501 brain-tumor-detector
+   ```
+3. Open your browser and navigate to **http://localhost:8501**.
+
+### Option 2: Using Docker Compose
+```bash
+docker compose up --build
+```
+
+### Option 3: Using Docker Compose In Detatch Mode
+```bash
+docker compose up -d --build
+```
+
+### Stop Docker Containers Using Docker Compose
+```bash
+docker compose down
+```
+
+---
 ### 💡 How to Use
 1. Once the web app opens, click on the **"Browse files"** button or drag and drop an MRI scan image (supported formats: JPG, JPEG, PNG).
 2. The AI will instantly analyze the scan and automatically display the **Diagnosis Result** and **Confidence Level** without requiring any further clicks!
